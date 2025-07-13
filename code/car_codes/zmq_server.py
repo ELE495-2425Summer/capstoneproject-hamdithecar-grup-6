@@ -80,7 +80,7 @@ class ZMQServer:
                 f"export DISPLAY=:0 && " +  # Set display for audio
                 f"export PULSE_RUNTIME_PATH=/run/user/1000/pulse && " +  # PulseAudio
                 f"source bin/activate && " +
-                f"export GOOGLE_APPLICATION_CREDENTIALS='{project_dir}/sa_text_to_speech.json' && " +
+                f"export GOOGLE_APPLICATION_CREDENTIALS='{project_dir}/your-key-file.json' && " +
                 f"export PYTHONPATH='{project_dir}' && " +
                 f"python3 gcloudv4.py"
             ]
@@ -93,7 +93,7 @@ class ZMQServer:
                 'DISPLAY': ':0',
                 'PULSE_RUNTIME_PATH': '/run/user/1000/pulse',
                 'XDG_RUNTIME_DIR': '/run/user/1000',
-                'GOOGLE_APPLICATION_CREDENTIALS': f"{project_dir}/sa_text_to_speech.json",
+                'GOOGLE_APPLICATION_CREDENTIALS': f"{project_dir}/your-key-file.json",
                 'PYTHONPATH': project_dir
             })
             

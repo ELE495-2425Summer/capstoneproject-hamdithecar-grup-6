@@ -28,14 +28,14 @@ except ImportError:
     print("pub_message.py not found - notifications disabled")
 
 #activate stt key
-client_file = "sa_speech_to_text.json"
+client_file = "your-key-file.json"
 credentials = service_account.Credentials.from_service_account_file(client_file)
 stt_client = speech.SpeechClient(credentials=credentials)
 
 encoder = VoiceEncoder()
 
 #activate gemini
-genai.configure(api_key="AIzaSyDY7d7mn1baR5vp04pozq4Nu5T_IWWyaAk")
+genai.configure(api_key="your-key")
 gemini_model = genai.GenerativeModel("models/gemini-2.5-pro-preview-05-06")
 
 def send_api_status(status, message):

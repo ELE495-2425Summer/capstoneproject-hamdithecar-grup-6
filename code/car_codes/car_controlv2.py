@@ -339,7 +339,7 @@ def execute_commands(commands):
             if kosul and "_derece" in kosul:
                 try:
                     angle = float(kosul.split('_')[0])
-                    duration = (angle/ 90) * 0.28 #90 derecenin 0.7 saniye olduğu varsayılırsa
+                    duration = (angle/ 90) * 0.28 #90 derecenin 0.28 saniye olduğu varsayılırsa
                     print(f"Turning right for {angle}° ")
                     send_car_status(f"Araç {int(angle)} derece sağa dönüyor.")
                     TextToSpeech(f"{int(angle)} derece sağa dönüyorum.")
